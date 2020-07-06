@@ -12,7 +12,6 @@ class Coin:
         driver = webdriver.Chrome(driver_path)
         url = 'http://luka7.net/'
         driver.get(url)
-        # driver.implicitly_wait(10)
         WebDriverWait(driver, 100).until(EC.presence_of_element_located((By.CSS_SELECTOR, "#coinList>div.BTC>div.minus")))
 
         search_kewords = ['BTC', 'XRP']
